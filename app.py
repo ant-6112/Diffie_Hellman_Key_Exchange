@@ -7,7 +7,6 @@ app = Flask(__name__)
 cors = CORS(app)
 
 @app.route("/generate-keys", methods=["GET"])
-
 def generate_keys():
     Diffie = DiffieHellmanKeyExchange()
     private_key, public_key = Diffie.generate_private_key(),Diffie.generate_public_key()
@@ -15,13 +14,17 @@ def generate_keys():
 
 
 @app.route("/generate-shared-key", methods=["GET"])
-
 def generate_shared_key():
     try:
         local_private_key = request.args.get("local_private_key")
         remote_public_key = request.args.get("remote_public_key")
-        shared_key = DiffieHellmanKeyExchange.gen_shared_key_static(
-            local_private_key, remote_public_key
+    except:
+        return jsonify({"message": "Invalid parameters"}), 400
+    
+    try:
+        shared_key = DiffieHellmanKeyExchange.generate_shared_key_static(
+            local_private_key, 
+            remote_public_key
         )
     except:
         return jsonify({"message": "Invalid public key"}), 400

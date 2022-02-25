@@ -1,8 +1,11 @@
 # Diffie-Hellman-Key-Exchange - By Antrang Agrawal for ACM Recruitments
 
 ## Functionality:
-* Securely Exchange Secret Keys Between Alice and Bob 
-* There is No Chance of Man in the Middle Attack From Another Client
+* Securely Exchange Keys Between Antrang and Member
+
+## Added Functionality:
+* Securely Excahnging Keys Between Antrang and Member Over a Client-Server Network
+* Securely Exchanging Keys Between Antrang and Member Over and Using The Shared Key To Encrypt and Decrypt a Message
 
 ## Installation 
 
@@ -20,12 +23,24 @@ cd Diffie_Hellman_Key_Exchange
  cd Diffie_Hellman_Key_Exchange <!-- Again --->
 ```
 
-3. Run these Commands:
+3. Run these Commands (For Seeing the Exchange)
 
 ```
-py Server.py
-py Alice.py 
-py Bob.py
+./Main.py
+```
+
+4. Run these Commands (For Seeing the Exchange of Keys over a Client-Server Network)
+
+```
+./server.py
+./client.py
+```
+
+5. Run these Commands (For Seeing the Exchange of Keys over a Client-Server Network and Using The Shared Key To Encrypt and Decrypt a Message)
+
+```
+./server.py
+./client2.py
 ```
 
 

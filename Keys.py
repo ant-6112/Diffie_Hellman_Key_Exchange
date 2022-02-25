@@ -31,5 +31,3 @@ Member_shared_key = requests.get(
     params=Member_params).json()["shared_key"]
 
 assert Antrang_shared_key == Member_shared_key
-
-print(Antrang_shared_key)
