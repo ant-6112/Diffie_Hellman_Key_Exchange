@@ -1,7 +1,7 @@
 # Diffie-Hellman-Key-Exchange - By Antrang Agrawal for ACM Recruitments
 
-## Functionality:
-* Securely Exchange Keys Between Antrang and Member
+## Task Provided:
+* Securely Exchange Keys Between Antrang and Member Using Diffie-Hellman-Key-Exchange
 
 ## Added Functionality:
 * Securely Excahnging Keys Between Antrang and Member Over a Client-Server Network
